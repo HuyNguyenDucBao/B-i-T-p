@@ -1,0 +1,3 @@
+C:/Users/huyga/Documents/GitHub/B-i-T-p/Thư mục mới/cmake-build-debug/CMakeFiles/Th_muc_mi.dir
+C:/Users/huyga/Documents/GitHub/B-i-T-p/Thư mục mới/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/huyga/Documents/GitHub/B-i-T-p/Thư mục mới/cmake-build-debug/CMakeFiles/rebuild_cache.dir
