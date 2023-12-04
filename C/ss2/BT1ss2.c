@@ -13,7 +13,7 @@ int main() {
     scanf("%f", &bkht);
 
 
-            printf ("Dien tich hinh vuong %.2lf - Chu vi hinh vuong %.2lf\n", 4*chv ,chv*chv );
+            printf ("Dien tich hinh vuong %.2lf - Chu vi hinh vuong %.2lf\n", chv*chv ,4*chv );
             printf ("Dien tich hinh chu nhat %.2lf - Chu vi hinh chu nhat %.2lf\n", dhcn*rhcn , (dhcn+rhcn)*2);
             printf ("Chu vi hinh tron %.2lf - Dien tich hinh tron %.2lf" ,2*Pi*bkht , Pi*bkht*bkht);
 
