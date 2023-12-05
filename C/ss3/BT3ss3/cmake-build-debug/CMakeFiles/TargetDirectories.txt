@@ -1,0 +1,3 @@
+C:/Users/huyga/Documents/GitHub/B-i-T-p/C/ss3/BT3ss3/cmake-build-debug/CMakeFiles/untitled1.dir
+C:/Users/huyga/Documents/GitHub/B-i-T-p/C/ss3/BT3ss3/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/huyga/Documents/GitHub/B-i-T-p/C/ss3/BT3ss3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
