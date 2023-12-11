@@ -1,9 +1,6 @@
 cmake_minimum_required(VERSION 3.26)
-project(untitled2 CUDA)
+project(untitled C)
 
-set(CMAKE_CUDA_STANDARD 17)
+set(CMAKE_C_STANDARD 11)
 
-add_executable(untitled2 main.cu)
-
-set_target_properties(untitled2 PROPERTIES
-        CUDA_SEPARABLE_COMPILATION ON)
+add_executable(untitled main.c)

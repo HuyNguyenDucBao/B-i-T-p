@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/huyga/Documents/GitHub/B-i-T-p/bt2ss6
+# Install script for directory: C:/Users/huyga/Documents/GitHub/B-i-T-p/C/ss6/bt2ss6
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/huyga/Documents/GitHub/B-i-T-p/bt2ss6/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/huyga/Documents/GitHub/B-i-T-p/C/ss6/bt2ss6/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

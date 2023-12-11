@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/huyga/Documents/GitHub/B-i-T-p/bt2ss6/cmake-build-debug"
+			"value" : "c:/Users/huyga/Documents/GitHub/B-i-T-p/C/ss6/bt1ss6/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -431,7 +431,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/huyga/Documents/GitHub/B-i-T-p/bt2ss6/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/huyga/Documents/GitHub/B-i-T-p/C/ss6/bt1ss6/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -503,7 +503,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/huyga/Documents/GitHub/B-i-T-p/bt2ss6"
+			"value" : "C:/Users/huyga/Documents/GitHub/B-i-T-p/C/ss6/bt1ss6"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -515,7 +515,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/untitled5"
+			"value" : "C:/Program Files (x86)/untitled3"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -731,7 +731,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "untitled5"
+			"value" : "untitled3"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1122,7 +1122,7 @@
 			"value" : "TRUE"
 		},
 		{
-			"name" : "untitled5_BINARY_DIR",
+			"name" : "untitled3_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1131,10 +1131,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/huyga/Documents/GitHub/B-i-T-p/bt2ss6/cmake-build-debug"
+			"value" : "C:/Users/huyga/Documents/GitHub/B-i-T-p/C/ss6/bt1ss6/cmake-build-debug"
 		},
 		{
-			"name" : "untitled5_IS_TOP_LEVEL",
+			"name" : "untitled3_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1146,7 +1146,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "untitled5_SOURCE_DIR",
+			"name" : "untitled3_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1155,7 +1155,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/huyga/Documents/GitHub/B-i-T-p/bt2ss6"
+			"value" : "C:/Users/huyga/Documents/GitHub/B-i-T-p/C/ss6/bt1ss6"
 		}
 	],
 	"kind" : "cache",
