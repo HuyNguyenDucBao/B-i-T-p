@@ -201,10 +201,5 @@ int main() {
         }
     } while (choice != 9);
 
-    // Free the memory allocated for the two-dimensional array
-    for (int i = 0; i < n; i++)
-        free(a[i]);
-    free(a);
-
     return 0;
 }
