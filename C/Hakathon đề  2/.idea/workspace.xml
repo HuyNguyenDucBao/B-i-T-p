@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
@@ -43,9 +46,6 @@
       <change beforePath="$PROJECT_DIR$/../cmake-build-debug/cmake_install.cmake" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../library.c" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../library.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../hakathon/Demo Hakathon 2/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../hakathon/Demo Hakathon 2/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../hakathon/Hakathon đề  2/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +106,7 @@
       <updated>1702959490816</updated>
       <workItem from="1702959491781" duration="13000" />
       <workItem from="1702959594037" duration="42000" />
-      <workItem from="1702960021058" duration="386000" />
+      <workItem from="1702960021058" duration="673000" />
     </task>
     <servers />
   </component>
@@ -118,7 +118,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/PTIT_ KS2023S_NguyenDucBaoHuy_(De2).c</url>
-          <line>157</line>
+          <line>167</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
