@@ -62,14 +62,26 @@ void bubbleSortMainDiagonal(int **a, int n) {
 }
 
 // Function to insert a one-dimensional array into a specific row of a two-dimensional array (case 8)
-void insertArrayIntoMatrix(int **a, int *b, int n, int m, int k) {
-    if (k < 0 || k >= n) {
-        printf("Chi so dong khong hop le.\n");
-        return;
+void insertArrayIntoMatrix(int** a, int* b, int* n, int m, int k) {
+    // Tạo một mảng mới với kích thước lớn hơn 1
+    int** new_a = (int**)malloc((*n + 1) * sizeof(int*));
+    for (int i = 0; i < *n + 1; i++) {
+        new_a[i] = (int*)malloc(m * sizeof(int));
     }
-    for (int j = 0; j < m; j++)
-        a[k][j] = b[j];
+
+    // Chèn các phần tử từ mảng cũ và mảng b vào mảng mới
+    for (int i = 0; i < *n + 1; i++) {
+        if (i < k) {
+            new_a[i] = a[i];
+        } else if (i == k) {
+            new_a[i] = b;
+        } else {
+            new_a[i] = a[i - 1];
+        }
+    }
 }
+
+
 
 // Function to print elements on the boundary and main diagonals and calculate their sum (case 4)
 void printAndSumBoundariesAndDiagonals(int **a, int n, int m) {
@@ -99,7 +111,7 @@ void printAndSumBoundariesAndDiagonals(int **a, int n, int m) {
 }
 
 int main() {
-    int n, m, *b, count;
+    int n, m, *b, count,k;
     printf("Nhap so dong (n): ");
     scanf("%d", &n);
     printf("Nhap so cot (m): ");
@@ -175,20 +187,11 @@ int main() {
                 break;
             case 8:
                 // Nhập giá trị một mảng 1 chiều gồm m phần tử và chỉ số dòng muốn chèn vào mảng, thực hiện chèn vào mảng 2 chiều
-                b = (int *)malloc(m * sizeof(int));
-                printf("Nhap mang 1 chieu gom %d phan tu:\n", m);
-                for (int i = 0; i < m; i++) {
-                    printf("Nhap b[%d] = ", i);
-                    scanf("%d", &b[i]);
-                }
-                int k;
                 printf("Nhap chi so dong muon chen: ");
                 scanf("%d", &k);
-                insertArrayIntoMatrix(a, b, n, m, k);
+                insertArrayIntoMatrix(a, b, &n, m, k);
                 printf("Mang sau khi chen:\n");
                 printArray(a, n, m);
-                // Free the memory allocated for array b after using it
-                free(b);
                 break;
             case 9:
                 printf("Thoat.\n");
