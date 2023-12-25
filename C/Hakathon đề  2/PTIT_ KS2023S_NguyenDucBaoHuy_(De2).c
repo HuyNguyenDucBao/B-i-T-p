@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 // Function to check prime numbers (case 6)
 int isPrime(int n) {
@@ -72,15 +73,24 @@ void insertArrayIntoMatrix(int** a, int* b, int* n, int m, int k) {
     // Chèn các phần tử từ mảng cũ và mảng b vào mảng mới
     for (int i = 0; i < *n + 1; i++) {
         if (i < k) {
-            new_a[i] = a[i];
+            memcpy(new_a[i], a[i], m * sizeof(int));
         } else if (i == k) {
-            new_a[i] = b;
+            memcpy(new_a[i], b, m * sizeof(int));
         } else {
-            new_a[i] = a[i - 1];
+            memcpy(new_a[i], a[i - 1], m * sizeof(int));
         }
     }
-}
 
+    // Giải phóng bộ nhớ của mảng cũ
+    for (int i = 0; i < *n; i++) {
+        free(a[i]);
+    }
+    free(a);
+
+    // Cập nhật con trỏ và số lượng phần tử
+    a = new_a;
+    (*n)++;
+}
 
 
 // Function to print elements on the boundary and main diagonals and calculate their sum (case 4)
