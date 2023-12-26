@@ -20,7 +20,8 @@ int main(void) {
         printf("Nhap chi tiet thanh pho thu %d:\n", i+1);
 
         printf("Nhap ten thanh pho: ");
-        scanf("%s", cities[i].name);
+        getchar();
+        gets( cities[i].name);
 
         printf("Nhap tong thu nhap: ");
         scanf("%lf", &cities[i].income);
