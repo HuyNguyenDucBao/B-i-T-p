@@ -16,12 +16,12 @@ int main(void) {
 
     ThanhPho cities[n];
 
-    for(i = 0; i < n; i++) {
+    for(i = 1; i < n; i++) {
         printf("Nhap chi tiet thanh pho thu %d:\n", i+1);
 
         printf("Nhap ten thanh pho: ");
         getchar();
-        gets( cities[i].name);
+        gets(cities[i].name);
 
         printf("Nhap tong thu nhap: ");
         scanf("%lf", &cities[i].income);
