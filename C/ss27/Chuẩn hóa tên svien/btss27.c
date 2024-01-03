@@ -22,10 +22,10 @@ void chuanHoa(char s[]) {
 
 int main() {
     FILE *f1, *f2;
+    int n;
     f1 = fopen("sinhvien.txt", "r");
     f2 = fopen("sinhvien_out.txt", "w");
 
-    int n;
     fscanf(f1, "%d\n", &n);
     fprintf(f2, "%d\n", n);
 
