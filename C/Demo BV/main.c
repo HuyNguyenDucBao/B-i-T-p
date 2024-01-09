@@ -12,6 +12,89 @@ typedef struct {
     float diemHoa;
 } SinhVien;
 
+// Function
+int isValidHoTen(char *hoTen);
+int isValidMaSV(char *maSV);
+int isValidLop(char *lop);
+void chuanHoa(SinhVien *sv);
+float nhapDiem(const char* monHoc);
+void inThongTin(SinhVien sv);
+void nhapSinhVien(SinhVien *sv);
+void themSinhVien();
+void suaSinhVien();
+void xoaSinhVien();
+void hienThongTin();
+int compareTang(const void *a, const void *b);
+int compareGiam(const void *a, const void *b);
+void sapXepSinhVienTheoDiemTB(int (*compare)(const void *, const void *));
+void timKiemTheoLop();
+void timKiemTheoDiemTrongKhoang();
+void xoainfoTxt();
+
+int main() {
+    // Hien thi menu va thuc hien cac chuc nang tuong ung
+    int choice;
+    do {
+        printf("\n*************** Menu quan ly sinh vien *****************\n");
+        printf("1. Them sinh vien\n");
+        printf("2. Sua sinh vien\n");
+        printf("3. Xoa sinh vien\n");
+        printf("4. Hien thi thong tin sinh vien\n");
+        printf("5. Sap xep sinh vien theo diem trung binh (Tang hoac Giam)\n");
+        printf("6. Tim kiem theo lop\n");
+        printf("7. Tim kiem theo diem trong khoang (min-max)\n");
+        printf("8. Xoa du lieu file student.txt\n");
+        printf("0. Thoat\n");
+        printf("Nhap lua chon cua ban: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                themSinhVien();
+                break;
+            case 2:
+                suaSinhVien();
+                break;
+            case 3:
+                xoaSinhVien();
+                break;
+            case 4:
+                hienThongTin();
+                break;
+            case 5:
+                printf("1. Sap xep theo tang dan\n");
+                printf("2. Sap xep theo giam dan\n");
+                int sortChoice;
+                scanf("%d", &sortChoice);
+                if (sortChoice == 1) {
+                    sapXepSinhVienTheoDiemTB(compareTang);
+                } else if (sortChoice == 2) {
+                    sapXepSinhVienTheoDiemTB(compareGiam);
+                } else {
+                    printf("Lua chon khong hop le.\n");
+                }
+                break;
+            case 6:
+                timKiemTheoLop();
+                break;
+            case 7:
+                timKiemTheoDiemTrongKhoang();
+                break;
+            case 8:
+                xoainfoTxt();
+                break;
+            case 9:
+                printf("Thoat chuong trinh\n");
+                break;
+            default:
+                printf("Lua chon khong hop le\n");
+                break;
+        }
+    } while (choice != 9);
+    return 0;
+}
+
+// Các hàm
 int isValidHoTen(char *hoTen) {
     return strlen(hoTen) >= 5 && strlen(hoTen) <= 30;
 }
@@ -28,16 +111,16 @@ void chuanHoa(SinhVien *sv) {
     char *start = sv->hoTen;
     char *end = start + strlen(sv->hoTen) - 1;
 
-    while (isspace(*start)) start++;
-    while (isspace(*end)) end--;
+    while (isspace((unsigned char)*start)) start++;
+    while (start <= end && isspace((unsigned char)*end)) end--;
     *(end + 1) = '\0';
 
     memmove(sv->hoTen, start, end - start + 2);
 
-    sv->hoTen[0] = toupper(sv->hoTen[0]);
+    sv->hoTen[0] = toupper((unsigned char)sv->hoTen[0]);
 
     for (int i = 1; sv->hoTen[i]; i++) {
-        sv->hoTen[i] = isspace(sv->hoTen[i - 1]) ? toupper(sv->hoTen[i]) : tolower(sv->hoTen[i]);
+        sv->hoTen[i] = isspace((unsigned char)sv->hoTen[i - 1]) ? toupper((unsigned char)sv->hoTen[i]) : tolower((unsigned char)sv->hoTen[i]);
     }
 }
 
@@ -78,9 +161,12 @@ void nhapSinhVien(SinhVien *sv) {
     do {
         printf("Nhap ho ten: ");
         getchar();
-        fgets(sv->hoTen, 31, stdin);
+        gets(sv->hoTen);
         sv->hoTen[strcspn(sv->hoTen, "\n")] = 0;
         chuanHoa(sv);
+        if (!isValidHoTen(sv->hoTen)) {
+            printf("Vui long nhap du Ho va Ten cua sinh vien!\n");
+        }
     } while (!isValidHoTen(sv->hoTen));
 
     do {
@@ -160,7 +246,7 @@ void hienThongTin() {
         fseek(file, 0, SEEK_END); //di chuyển con trỏ về vị trí cuối file
         if (ftell(file) == 0) // nếu trả về vị trí hiện tại của con trỏ file = 0 (con trỏ không di chuyển khỏi vị trí)
         {
-            printf("File không có dữ liệu, vui lòng nhập dữ liệu.\n");
+            printf("File khong co du lieu, vui long nhap du lieu.\n");
         } else {
             rewind(file);  // đặt lại con trỏ file về đầu file trước khi bắt đầu đọc dữ liệu
             while (fread(&sv, sizeof(SinhVien), 1, file) == 1) {
@@ -168,7 +254,7 @@ void hienThongTin() {
             }
         }
     } else {
-        printf("File không tồn tại, vui lòng kiểm tra lại.\n");
+        printf("File khong ton tai, vui long kiem tra lai.\n");
     }
     fclose(file);
 }
@@ -273,65 +359,65 @@ void xoainfoTxt() {
     }
 }
 
-int main() {
-    // Hien thi menu va thuc hien cac chuc nang tuong ung
-    int choice;
-    do {
-        printf("\n*************** Menu quan ly sinh vien *****************\n");
-        printf("1. Them sinh vien\n");
-        printf("2. Sua sinh vien\n");
-        printf("3. Xoa sinh vien\n");
-        printf("4. Hien thi thong tin sinh vien\n");
-        printf("5. Sap xep sinh vien theo diem trung binh (Tang hoac Giam)\n");
-        printf("6. Tim kiem theo lop\n");
-        printf("7. Tim kiem theo diem trong khoang (min-max)\n");
-        printf("8. Xoa du lieu file student.txt\n");
-        printf("0. Thoat\n");
-        printf("Nhap lua chon cua ban: ");
-        scanf("%d", &choice);
-
-        switch (choice) {
-            case 1:
-                themSinhVien();
-                break;
-            case 2:
-                suaSinhVien();
-                break;
-            case 3:
-                xoaSinhVien();
-                break;
-            case 4:
-                hienThongTin();
-                break;
-            case 5:
-                printf("1. Sap xep theo tang dan\n");
-                printf("2. Sap xep theo giam dan\n");
-                int sortChoice;
-                scanf("%d", &sortChoice);
-                if (sortChoice == 1) {
-                    sapXepSinhVienTheoDiemTB(compareTang);
-                } else if (sortChoice == 2) {
-                    sapXepSinhVienTheoDiemTB(compareGiam);
-                } else {
-                    printf("Lua chon khong hop le.\n");
-                }
-                break;
-            case 6:
-                timKiemTheoLop();
-                break;
-            case 7:
-                timKiemTheoDiemTrongKhoang();
-                break;
-            case 8:
-                xoainfoTxt();
-                break;
-            case 9:
-                printf("Thoat chuong trinh\n");
-                break;
-            default:
-                printf("Lua chon khong hop le\n");
-                break;
-        }
-    } while (choice != 9);
-    return 0;
-}
+//int main() {
+//    // Hien thi menu va thuc hien cac chuc nang tuong ung
+//    int choice;
+//    do {
+//        printf("\n*************** Menu quan ly sinh vien *****************\n");
+//        printf("1. Them sinh vien\n");
+//        printf("2. Sua sinh vien\n");
+//        printf("3. Xoa sinh vien\n");
+//        printf("4. Hien thi thong tin sinh vien\n");
+//        printf("5. Sap xep sinh vien theo diem trung binh (Tang hoac Giam)\n");
+//        printf("6. Tim kiem theo lop\n");
+//        printf("7. Tim kiem theo diem trong khoang (min-max)\n");
+//        printf("8. Xoa du lieu file student.txt\n");
+//        printf("0. Thoat\n");
+//        printf("Nhap lua chon cua ban: ");
+//        scanf("%d", &choice);
+//
+//        switch (choice) {
+//            case 1:
+//                themSinhVien();
+//                break;
+//            case 2:
+//                suaSinhVien();
+//                break;
+//            case 3:
+//                xoaSinhVien();
+//                break;
+//            case 4:
+//                hienThongTin();
+//                break;
+//            case 5:
+//                printf("1. Sap xep theo tang dan\n");
+//                printf("2. Sap xep theo giam dan\n");
+//                int sortChoice;
+//                scanf("%d", &sortChoice);
+//                if (sortChoice == 1) {
+//                    sapXepSinhVienTheoDiemTB(compareTang);
+//                } else if (sortChoice == 2) {
+//                    sapXepSinhVienTheoDiemTB(compareGiam);
+//                } else {
+//                    printf("Lua chon khong hop le.\n");
+//                }
+//                break;
+//            case 6:
+//                timKiemTheoLop();
+//                break;
+//            case 7:
+//                timKiemTheoDiemTrongKhoang();
+//                break;
+//            case 8:
+//                xoainfoTxt();
+//                break;
+//            case 9:
+//                printf("Thoat chuong trinh\n");
+//                break;
+//            default:
+//                printf("Lua chon khong hop le\n");
+//                break;
+//        }
+//    } while (choice != 9);
+//    return 0;
+//}

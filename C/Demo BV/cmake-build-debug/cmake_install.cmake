@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/huyga/Documents/GitHub/B-i-T-p/Demo BV
+# Install script for directory: C:/Users/huyga/Documents/GitHub/B-i-T-p/C/Demo BV
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/huyga/Documents/GitHub/B-i-T-p/Demo BV/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/huyga/Documents/GitHub/B-i-T-p/C/Demo BV/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
