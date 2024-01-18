@@ -368,4 +368,3 @@ void xoainfoTxt() {
         fclose(file);
     }
 }
-
