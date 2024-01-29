@@ -1,50 +1,108 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+/* Navigation Bar */
+nav {
+    background-color: purple;
+    color: white;
+    padding: 25px;
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically */
+}
+#logo {
+    font-size: 25px;
+}
+nav ul {
+    display: flex;
+    gap: 20px;
 }
 
-  .item1 {
-      grid-area: item1;
-  }
-  .item2 {
-      grid-area: item2;
-  }
-  .item3 {
-      grid-area: item3;
-  }
-  .item4 {
-      grid-area: item4;
-  }
-  .item5 {
-      grid-area: item5;
-  }
-  .item6 {
-      grid-area: item6;
-  }
-  .item7 {
-      grid-area: item7;
-  }
-  .item8 {
-      grid-area: item8;
-  }
-  .item9 {
-      grid-area: item9;
-  }
-  .grid-container {
-      display: grid;
-      grid-template-areas: 
-          'item1 item2 item2 item3'
-          'item4 item4 item5 item6'
-          'item7 item8 item9 item9';
-  }
+nav ul li {
+    list-style-type: none;
+}
 
-  .item1, .item3, .item4, .item6, .item8 {
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px; /* Increase font size */
+}
+
+/* Carousel */
+.carousel {
+    background-image: url('./b3.jpg');
+    background-size: cover;
+    height: 550px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-item {
+    text-align: center;
+    color: white;
+}
+
+.carousel h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.carousel p {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff69b4; /* Hot pink */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+
+/* Grid Layout */
+.item1 {
+    grid-area: item1;
+}
+.item2 {
+    grid-area: item2;
+}
+.item3 {
+    grid-area: item3;
+}
+.item4 {
+    grid-area: item4;
+}
+.item5 {
+    grid-area: item5;
+}
+.item6 {
+    grid-area: item6;
+}
+.item7 {
+    grid-area: item7;
+}
+.item8 {
+    grid-area: item8;
+}
+.item9 {
+    grid-area: item9;
+}
+
+.grid-container {
+    display: grid;
+    height: 100px;
+    grid-template-areas: 
+        'item1 item2 item2 item3'
+        'item4 item4 item5 item6'
+        'item7 item8 item9 item9';
+}
+
+.item1, .item3, .item4, .item6, .item8 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,8 +142,7 @@ img {
     height: 100%;
     object-fit: cover;
 }
-
-@media screen and (min-width: 768px) and (max-with: 1024px){
+@media only screen and (max-width: 480px) {
     .grid-container {
         grid-template-areas: 
             'item1 item1 item1 item1'
@@ -94,9 +151,10 @@ img {
             'item4 item4 item4 item4'
             'item5 item5 item5 item5'
             'item6 item6 item6 item6'
-            'ite7 item7 item7 item7'
+            'item7 item7 item7 item7'
             'item8 item8 item8 item8'
             'item9 item9 item9 item9';
-
+            
     }
 }
+
