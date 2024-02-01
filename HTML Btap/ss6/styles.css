@@ -1,7 +1,9 @@
+
+
 body {
-  font-family: Arial, sans-serif;
-  color: black;
-  background-color: white;
+  font-family: 'Arial', sans-serif;
+  color: #000;
+  background-color: #fff;
 }
 
 .details {
@@ -10,7 +12,7 @@ body {
 }
 
 .left, .right {
-  width: 50%;
+  flex-basis: 50%;
 }
 
 .left h2, .right p {
@@ -20,27 +22,34 @@ body {
 .languages {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: right;
+  justify-content:center;
 }
 
 .languages div {
-  width: 200px; 
+  display: flex;
+  flex-basis: 200px; 
   height: 100px; 
-  border: 1px solid #cccccc; 
+  border: 1px solid #ccc; 
   margin: 10px; 
-  padding: 10px;
-  text-align: right; 
+  padding: 10px; 
   box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
 }
 
 .languages h3 {
   font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .languages img {
   width: 64px;
   height: 64px;
-  margin: 10px auto;
+  margin: 10px ;
+  display: block;
+  padding: 15px;
 }
 
+.languages p {
+  white-space: nowrap;
+  bottom: 15px;
+
+}
