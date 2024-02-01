@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  color: black;
+  background-color: white;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left, .right {
+  width: 50%;
+}
+
+.left h2, .right p {
+  margin-bottom: 10px;
+}
+
+.languages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: right;
+}
+
+.languages div {
+  width: 200px; 
+  height: 100px; 
+  border: 1px solid #cccccc; 
+  margin: 10px; 
+  padding: 10px;
+  text-align: right; 
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.languages h3 {
+  font-weight: bold;
+}
+
+.languages img {
+  width: 64px;
+  height: 64px;
+  margin: 10px auto;
+}
+
