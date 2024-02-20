@@ -1,0 +1,220 @@
+/* Background styling */
+body {
+  background:rgb(0, 0, 58);
+  color: white;
+  font-family: Arial, sans-serif;
+}
+.de {
+  padding: 30px;
+}
+.chu {
+  padding: 30px;
+}
+.c1 {
+  color: white
+}
+.c2 {
+  color:azure;
+}
+.bang {
+  padding: 30px;
+  color: white;
+}
+.thongtin1 {
+  color: white;
+}
+.thongtin2 {
+  color: white;
+}
+.thongtin3 {
+  color: white;
+}
+.thongtin4 {
+  color: white;
+}
+
+.Myproject h1 {
+  color:white;
+  text-align: center;
+}
+.white-text {
+  color: white;
+}
+
+.purple-text {
+  color: purple;
+}
+
+
+.Muc {
+  display: flex;
+  justify-content: center;
+}
+
+.item1,
+.item2,
+.item3,
+.item4,
+.item5 {
+  padding: 30px;
+  position: relative;
+  display: inline-block; 
+  text-align: center; 
+  margin:  10px;
+}
+
+.item6 {
+  position: relative;
+  display: inline-block; 
+}
+
+
+
+.item7 {
+  position: relative;
+  display: inline-block; 
+}
+
+
+.item8 {
+  position: relative;
+  display: inline-block; 
+}
+
+.item9 {
+  position: relative;
+  display: inline-block; 
+  
+}
+.thongtin1,
+.thongtin2,
+.thongtin3,
+.thongtin4 {
+  position: absolute;
+  top: 150px;
+  left: 330px; 
+  width: 300px;
+  height: 300px;
+  padding: 30px;
+  margin: 15px;
+  text-align: center;
+  box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.item6,
+.item7,
+.item8,
+.item9 {
+  padding: 30px;
+  margin-bottom: 30px;
+  margin-right: 100px;
+}
+
+.Sectionwork {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item10,
+.item11,
+.item12,
+.item13{
+  text-align: center;
+  color: white;
+  padding: 30px;
+  display:flex;
+  /* width: 200px;
+  height: 60px;
+  padding: 20px;
+  margin: 15px; */
+  text-align: center;
+  
+}
+/* .Header {
+  display: flex;
+  align-items: center; 
+}
+
+/* Container layout */
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+/* Left section */
+.left {
+  flex: 1;
+  text-align: right;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+/* Right section */
+.right {
+  flex: 1;
+  right: 0;
+  padding: 20px;
+}
+
+/* Center section */
+.center {
+  flex: 1;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-110%);
+}
+
+/* Heading style */
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  padding: 0;
+}
+
+/* Name color */
+.name {
+  color: rgb(108, 54, 207);
+}
+
+/* Paragraph style */
+p {
+  color: lightgray;
+  margin-bottom: 20px;
+}
+
+/* Button style */
+.button {
+  border: 2px solid white;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+}
+
+/* Sub-header style */
+.sub-header {
+  color: white;
+  font-size: 1.5em;
+  margin-top: 300px;
+  text-align: left;
+  transform: translateX(110%);
+
+}
+
+/* Image styling */
+.my-image {
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* Responsive image */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.thuba {
+  flex-grow: 1; 
+} */
