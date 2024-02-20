@@ -137,15 +137,20 @@ img {
   padding-right: 10px;
   grid-area: item2;
   width: 560px;
-
+  transform: translateX(10%);
 }
 .about-me__left--infor {
   display: flex;
 }
+
+.about-me__left h5 {
+transform: translateX(2%);
+}
+
 .about-me__left--infor-1,
 .about-me__left--infor-2,
 .about-me__left--infor-3 {
-  margin: 50px 25px 0 0;
+  margin: 30px 0px 0 0;
 }
 .about-me__left--infor-2,
 .about-me__left--infor-3 {
@@ -164,7 +169,6 @@ img {
   grid-template-areas: 'item4 item5'
                        'item6 item7' ;
   height: 450px;
-  transform: translateY(10%);
   transform: translateX(-10%);
 }
 .about-me__right-1 {
